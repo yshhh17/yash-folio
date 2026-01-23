@@ -30,9 +30,9 @@ const formSchema = z.object({
 });
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, url: "https://github.com/Yashhh-ING" },
-  { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/yash-tiwari-a38163255/" },
-  { name: "Twitter", icon: Twitter, url: "https://twitter.com/Yashhh_ing" },
+  { name: "GitHub", icon: Github, url: "https://github.com/yshhh17" },
+  { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/yshhh17" },
+  { name: "Twitter", icon: Twitter, url: "https://twitter.com/yshhh17" },
 ];
 
 const Contact = () => {
@@ -60,73 +60,38 @@ const Contact = () => {
           </h2>
           <div className="w-16 h-1 bg-primary mb-6 rounded-full" />
           <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-            I'm always open to discussing new projects, creative ideas, or opportunities 
+            I'm always open to discussing new projects, creative ideas, or opportunities
             to be part of your vision. Let's build something great together.
           </p>
           <div className="flex gap-4">
-          {socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-card rounded-xl border border-border text-muted-foreground hover:text-primary hover:border-primary hover:bg-primary/5 transition-all duration-300"
-              title={social.name}
-            >
-              <social.icon size={20} />
-            </a>
-          ))}
-        </div>
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-card rounded-xl border border-border text-muted-foreground hover:text-primary hover:border-primary hover:bg-primary/5 transition-all duration-300"
+                title={social.name}
+              >
+                <social.icon size={20} />
+              </a>
+            ))}
+          </div>
         </div>
         <Card className="bg-card border-border">
           <CardHeader>
             <CardTitle>Send me a message</CardTitle>
           </CardHeader>
           <CardContent>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your Name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea placeholder="Your message..." {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit" className="w-full">Send Message</Button>
-              </form>
-            </Form>
+            <p className="text-muted-foreground mb-6">
+              Click the button below to send me an email directly from your email client.
+            </p>
+            <a
+              href="mailto:yshhh173@gmail.com?subject=Hello%20from%20Portfolio&body=Hi%20Yash,%0D%0A%0D%0A"
+              className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300"
+            >
+              Send Email
+            </a>
           </CardContent>
         </Card>
       </div>

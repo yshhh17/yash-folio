@@ -41,11 +41,11 @@ const About = () => {
         <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
           I'm also passionate about competitive programming and problem-solving.
           I regularly practice on platforms like{" "}
-          <a href="https://leetcode.com/u/Yashhh-ING/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
+          <a href="https://leetcode.com/u/yshhh/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
             LeetCode
           </a>{" "}
           where I've solved 150+ problems with a rating of 1656, and{" "}
-          <a href="https://codeforces.com/profile/yash_t" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
+          <a href="https://codeforces.com/profile/q_" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
             Codeforces
           </a>{" "}
           where I hold a Pupil rank. These challenges help me sharpen my algorithmic thinking
@@ -55,7 +55,7 @@ const About = () => {
         {/* Resume Link */}
         <div className="mt-8">
           <a
-            href="/yash_res.pdf"
+            href="https://drive.google.com/file/d/1WFAF3wj-kfusVLsP2EtmrEo_axiv8WQ4/preview"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all font-semibold"

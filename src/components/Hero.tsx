@@ -20,8 +20,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden bg-card">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-4 md:px-6 pt-24 md:pt-0 relative overflow-hidden bg-card">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-12 items-center">
 
         {/* Text Content */}
         <motion.div
@@ -89,7 +89,7 @@ const Hero = () => {
           className="order-1 md:order-2 flex justify-center md:justify-end"
         >
           <div
-            className="relative w-80 h-80 md:w-96 md:h-96 cursor-pointer group"
+            className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 cursor-pointer group"
             onClick={handleProfileClick}
           >
             <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
