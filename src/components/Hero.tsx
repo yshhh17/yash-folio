@@ -9,7 +9,7 @@ const Hero = () => {
   const handleProfileClick = () => {
     const newCount = clickCount + 1;
     setClickCount(newCount);
-    
+
     if (newCount >= 5) {
       setShowEasterEgg(true);
       setTimeout(() => {
@@ -20,56 +20,80 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden bg-card">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-        
+
         {/* Text Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center md:text-left order-2 md:order-1"
         >
-          <p className="text-lg md:text-xl text-primary font-medium mb-2">
-            Hello, I'm
+          <p className="text-xl md:text-2xl text-primary font-medium mb-3 tracking-wide">
+            👋 Hi, I'm
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight">
-            Your Name
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-tight">
+            Yash
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-6">
-            Full Stack Developer <span className="text-primary">|</span> Backend Specialist
-          </p>
-          <p className="text-muted-foreground text-lg max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed">
-            Building robust, scalable backend systems and APIs. 
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 leading-tight text-foreground">
+            Full Stack Developer
+          </h2>
+          <p className="text-muted-foreground text-lg md:text-xl max-w-lg mx-auto md:mx-0 mb-10 leading-relaxed">
+            Building robust, scalable backend systems and APIs.
             Passionate about clean code, system design, and solving complex problems.
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
-            {["About", "Projects", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="px-6 py-3 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-primary hover:bg-primary/5 transition-all duration-300"
-              >
-                {item}
-              </a>
-            ))}
+            {/* View Projects Button */}
+            <a
+              href="#projects"
+              className="group relative px-8 py-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-lg font-semibold text-base overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:scale-105"
+            >
+              <span className="relative z-10">View Projects</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </a>
+
+            {/* Download Resume Button */}
+            <a
+              href="/yash_res.pdf"
+              download
+              className="group relative px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-lg font-semibold text-base overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-gray-700/50 hover:scale-105 border border-gray-600"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download Resume
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </a>
+
+            {/* Contact Button */}
+            <a
+              href="#contact"
+              className="group relative px-8 py-4 bg-transparent text-foreground rounded-lg font-semibold text-base border-2 border-border transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-lg hover:shadow-primary/20 hover:scale-105"
+            >
+              <span className="relative z-10">Get In Touch</span>
+            </a>
           </div>
         </motion.div>
 
         {/* Profile Picture */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="order-1 md:order-2 flex justify-center md:justify-end"
         >
-          <div 
-            className="relative w-64 h-64 md:w-80 md:h-80 cursor-pointer group"
+          <div
+            className="relative w-80 h-80 md:w-96 md:h-96 cursor-pointer group"
             onClick={handleProfileClick}
           >
-            <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative w-full h-full rounded-full bg-card border-4 border-border overflow-hidden transition-all duration-300 group-hover:border-primary group-hover:shadow-xl shadow-2xl">
+            <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative w-full h-full rounded-3xl bg-card border-4 border-border overflow-hidden transition-all duration-300 group-hover:border-primary group-hover:shadow-xl shadow-2xl">
               {/* Placeholder for profile picture */}
               <div className="w-full h-full flex items-center justify-center text-muted-foreground bg-secondary/50">
                 <span className="text-8xl"><img src="/Profile.jpg" alt="Profile" className="w-full h-full object-cover" /></span>
@@ -85,11 +109,11 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.a 
+      <motion.a
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1, repeat: Infinity, repeatType: "reverse" }}
-        href="#about" 
+        href="#about"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors"
       >
         <ChevronDown size={32} />

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin, Twitter, FileText, Home } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navItems = ["About", "Experience", "Projects", "Contact"];
+const navItems = ["Experience", "Projects", "About", "Contact"];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,20 +25,23 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 md:p-6"
     >
       <nav
-        className={`w-full max-w-5xl transition-all duration-500 rounded-full border border-white/10 ${
-          isScrolled
-            ? "bg-black/40 backdrop-blur-md py-3 px-6 shadow-2xl"
-            : "bg-background/20 backdrop-blur-sm py-4 px-8"
-        }`}
+        className={`w-full max-w-5xl transition-all duration-500 rounded-full border border-white/10 ${isScrolled
+          ? "bg-black/40 backdrop-blur-md py-3 px-6 shadow-2xl"
+          : "bg-background/20 backdrop-blur-sm py-4 px-8"
+          }`}
       >
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#hero" className="text-foreground font-bold text-xl hover:text-primary transition-colors tracking-tighter">
-            YN<span className="text-primary">.</span>
+        <div className="flex items-center justify-between w-full">
+          {/* Home Icon - Left */}
+          <a
+            href="#hero"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            title="Home"
+          >
+            <Home size={24} />
           </a>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Desktop Nav - Centered */}
+          <div className="hidden md:flex items-center justify-center flex-1 gap-8">
             {navItems.map((item) => (
               <a
                 key={item}
@@ -49,11 +52,21 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </a>
             ))}
-            <a
-              href="#contact"
-              className="px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold hover:bg-primary/90 transition-all hover:scale-105 active:scale-95"
-            >
-              Hire Me
+          </div>
+
+          {/* Social Media Links - Right Side */}
+          <div className="hidden md:flex items-center gap-4">
+            <a href="https://github.com/Yashhh-ING" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Github size={20} />
+            </a>
+            <a href="/yash_res.pdf" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <FileText size={20} />
+            </a>
+            <a href="https://twitter.com/Yashhh_ing" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Twitter size={20} />
+            </a>
+            <a href="https://www.linkedin.com/in/yash-singh-03a172291/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Linkedin size={20} />
             </a>
           </div>
 
@@ -87,13 +100,6 @@ const Navbar = () => {
                   {item}
                 </a>
               ))}
-              <a
-                href="#contact"
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-full text-center font-bold hover:bg-primary/90 transition-all"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Hire Me
-              </a>
             </div>
           </motion.div>
         )}

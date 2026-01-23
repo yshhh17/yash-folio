@@ -14,39 +14,30 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Geodermal Assistant",
-    description: "AI-powered environmental analysis for travelers. Get personalized skin and hair care recommendations based on your destination's climate, air quality, and water conditions.",
-    image: "/geodermal.png",
-    techStack: ["Node.js", "PostgreSQL", "Redis", "Docker"],
-    githubUrl: "https://github.com/yshhh17/GeoDermal_Assistant",
-    liveUrl: "https://geo-dermal-assistant.vercel.app/",
+    title: "GeoDermal Assistant",
+    description: "Built a travel wellness platform covering 30+ cities using FastAPI and React; implemented secure authentication, rate limiting (10 req/hr), and real-time user session management. Integrated Groq LLM with 3 real-time APIs for 6-factor health risk assessment; designed optimized and indexed PostgreSQL schemas for efficient query performance.",
+    image: "/geodermal-new.png",
+    techStack: ["FastAPI", "React", "PostgreSQL", "Docker"],
+    githubUrl: "https://github.com/Yashhh-ING/GeoDermal-Assistant",
+    liveUrl: "https://geodermal-assistant.vercel.app/",
   },
   {
     id: 2,
     title: "GiveHub",
-    description: "A modern, full-stack crowdfunding and donation platform designed to connect donors with causes. It features secure authentication, real-time donation processing via PayPal, and a transparent dashboard for tracking contributions.",
-    image: "/GiveHub.png",
-    techStack: ["Python", "FastAPI", "MongoDB", "Kubernetes"],
-    githubUrl: "https://github.com/yshhh17/GiveHub",
-    liveUrl: "https://give-hub-inky.vercel.app/",
+    description: "Developed a full-stack donation platform integrating PayPal REST APIs with webhook-based payment verification and email verification. Implemented JWT authentication, Redis-based OTP flow, and 8+ REST endpoints. Containerized services using Docker and configured rate limiting with automated transactional emails via SMTP.",
+    image: "/givehub-new.png",
+    techStack: ["React (Redux)", "Redis", "PayPal(WebHook)"],
+    githubUrl: "https://github.com/Yashhh-ING/GiveHub",
+    liveUrl: "https://give-hub.vercel.app/",
   },
   {
     id: 3,
     title: "VeriFact",
-    description: "Robust authentication service supporting OAuth2, JWT tokens, and fine-grained role-based access control (RBAC). Designed for high availability and security compliance.",
-    image: "/placeholder.svg",
-    techStack: ["TypeScript", "NestJS", "MySQL", "AWS"],
-    githubUrl: "https://github.com/yshhh17/VeriFact",
-    liveUrl: "https://github.com/yshhh17/VeriFact",
-  },
-  {
-    id: 4,
-    title: "Bucketlst",
-    description: "BucketList AI is a Next.js 14 application for AI-powered solo travel planning with TypeScript, Tailwind CSS, and Supabase integration.",
-    image: "/bucketlst.png",
-    techStack: ["Python", "Docker", "Jenkins", "Terraform"],
-    githubUrl: "#",
-    liveUrl: "https://bucketlst.io/",
+    description: "Developing an AI-based authenticity detection system for images, text, and video with explainable confidence scores. Implementing backend orchestration in Node.js/Express with batched inference and Redis-backed caching for real-time efficiency. Designing MongoDB schemas and REST APIs for moderation workflows, enabling streaming classifications and audit logging.",
+    image: "/verifact-new.png",
+    techStack: ["MERN stack", "Hugging Face"],
+    githubUrl: "https://github.com/Yashhh-ING/VeriFact",
+    liveUrl: "https://github.com/Yashhh-ING/VeriFact",
   },
 ];
 
@@ -67,7 +58,7 @@ const Projects = () => {
           </h2>
           <div className="w-16 h-1 bg-primary mb-4 rounded-full" />
           <p className="text-muted-foreground max-w-2xl text-lg">
-            Here are some of my recent projects. Each one showcases different aspects 
+            Here are some of my recent projects. Each one showcases different aspects
             of backend development, from API design to cloud infrastructure.
           </p>
         </motion.div>
@@ -116,7 +107,7 @@ const Projects = () => {
                     </a>
                   </div>
                 </div>
-                
+
                 <p className="text-muted-foreground mb-6 line-clamp-3 text-base flex-grow">
                   {project.description}
                 </p>

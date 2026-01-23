@@ -23,9 +23,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Left: Brand */}
           <div className="text-center md:text-left">
-            <span className="text-foreground font-semibold text-lg">Your Name</span>
+            <span className="text-foreground font-semibold text-lg">Yash Tiwari</span>
             <p className="text-sm text-muted-foreground mt-1">
-              Backend Developer
+              Full Stack Developer
             </p>
           </div>
 
@@ -65,7 +65,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-6 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Your Name. All rights reserved.
+            © {currentYear} Yash Tiwari. All rights reserved.
           </p>
         </div>
       </motion.div>
