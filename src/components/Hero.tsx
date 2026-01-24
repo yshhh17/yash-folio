@@ -56,7 +56,7 @@ const Hero = () => {
 
             {/* Download Resume Button */}
             <a
-              href="/yash_res.pdf"
+              href="https://drive.google.com/file/d/1WFAF3wj-kfusVLsP2EtmrEo_axiv8WQ4/preview"
               download
               className="group relative px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-lg font-semibold text-sm md:text-base overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-gray-700/50 hover:scale-105 border border-gray-600 text-center"
             >
