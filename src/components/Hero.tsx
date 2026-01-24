@@ -108,13 +108,14 @@ const Hero = () => {
         </motion.div>
       </div>
 
+
       {/* Scroll Indicator */}
       <motion.a
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1, repeat: Infinity, repeatType: "reverse" }}
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors"
+        className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors"
       >
         <ChevronDown size={32} />
       </motion.a>
