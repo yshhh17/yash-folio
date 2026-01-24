@@ -42,7 +42,7 @@ const achievements: Achievement[] = [
 
 const Achievements = () => {
     return (
-        <section id="achievements" className="py-24 px-6 bg-secondary/30">
+        <section id="achievements" className="py-20 md:py-24 px-4 md:px-6 bg-secondary/30">
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
                 <motion.div
@@ -52,11 +52,11 @@ const Achievements = () => {
                     transition={{ duration: 0.5 }}
                     className="mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
                         Achievements & Certifications
                     </h2>
                     <div className="w-16 h-1 bg-primary mb-4 rounded-full" />
-                    <p className="text-muted-foreground max-w-2xl text-lg">
+                    <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
                         Recognition for technical excellence, problem-solving abilities, and community contributions.
                     </p>
                 </motion.div>
@@ -70,17 +70,17 @@ const Achievements = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group bg-card rounded-xl border border-border p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
+                            className="group bg-card rounded-xl border border-border p-5 md:p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
                         >
                             <div className="flex items-start gap-4">
                                 {/* Icon */}
-                                <div className="flex-shrink-0 w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                                <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                                     {achievement.icon}
                                 </div>
 
                                 {/* Content */}
                                 <div className="flex-grow">
-                                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                                    <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                                         {achievement.title}
                                     </h3>
                                     <p className="text-muted-foreground mb-3 text-base">

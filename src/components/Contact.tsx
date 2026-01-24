@@ -52,14 +52,14 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+    <section id="contact" className="py-20 md:py-24 px-4 md:px-6">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12">
         <div className="flex flex-col justify-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
             Get In Touch
           </h2>
           <div className="w-16 h-1 bg-primary mb-6 rounded-full" />
-          <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+          <p className="text-muted-foreground mb-8 text-base md:text-lg leading-relaxed">
             I'm always open to discussing new projects, creative ideas, or opportunities
             to be part of your vision. Let's build something great together.
           </p>
@@ -70,7 +70,7 @@ const Contact = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-card rounded-xl border border-border text-muted-foreground hover:text-primary hover:border-primary hover:bg-primary/5 transition-all duration-300"
+                className="p-3 bg-card rounded-xl border border-border text-muted-foreground hover:text-primary hover:border-primary hover:bg-primary/5 transition-all duration-300 flex items-center justify-center"
                 title={social.name}
               >
                 <social.icon size={20} />

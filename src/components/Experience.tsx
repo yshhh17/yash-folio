@@ -31,7 +31,7 @@ const experiences: Experience[] = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 bg-secondary/30">
+    <section id="experience" className="py-20 md:py-24 px-4 md:px-6 bg-secondary/30">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ const Experience = () => {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
             Work Experience
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full" />
@@ -54,13 +54,13 @@ const Experience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative pl-8 border-l-2 border-border ${index !== experiences.length - 1 ? 'pb-12' : ''}`}
+              className={`relative pl-6 md:pl-8 border-l-2 border-border ${index !== experiences.length - 1 ? 'pb-12' : ''}`}
             >
               {/* Timeline Dot */}
               <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary" />
 
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-foreground">{exp.role}</h3>
                 <span className="text-sm text-muted-foreground font-medium bg-secondary px-3 py-1 rounded-full w-fit mt-2 sm:mt-0">
                   {exp.period}
                 </span>

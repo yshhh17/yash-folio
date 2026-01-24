@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer className="py-12 px-6 border-t border-border bg-background/50 backdrop-blur-sm">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
 
           {/* Center: Quick Links */}
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
             {["About", "Experience", "Projects", "Contact"].map((item) => (
               <a
                 key={item}
@@ -44,14 +44,14 @@ const Footer = () => {
 
           {/* Right: Fun tagline with easter egg */}
           <div className="text-center md:text-right">
-            <p 
+            <p
               className="text-sm text-muted-foreground flex items-center justify-center md:justify-end gap-1.5 cursor-pointer hover:text-foreground transition-colors"
               onClick={handleSecretClick}
             >
               Built with <Coffee size={14} className="text-primary" /> and <Code size={14} className="text-primary" />
             </p>
             {showSecret && (
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="text-xs text-primary mt-2"

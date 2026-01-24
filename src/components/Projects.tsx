@@ -43,7 +43,7 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-6 bg-card/30">
+    <section id="projects" className="py-20 md:py-24 px-4 md:px-6 bg-card/30">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -53,18 +53,18 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
             Projects
           </h2>
           <div className="w-16 h-1 bg-primary mb-4 rounded-full" />
-          <p className="text-muted-foreground max-w-2xl text-lg">
+          <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
             Here are some of my recent projects. Each one showcases different aspects
             of backend development, from API design to cloud infrastructure.
           </p>
         </motion.div>
 
         {/* Project Grid */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -85,9 +85,9 @@ const Projects = () => {
               </div>
 
               {/* Project Content */}
-              <div className="p-8 flex flex-col flex-grow">
+              <div className="p-6 md:p-8 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
                   <div className="flex gap-3">
