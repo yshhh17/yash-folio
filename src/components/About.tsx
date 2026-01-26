@@ -55,7 +55,7 @@ const About = () => {
         {/* Resume Link */}
         <div className="mt-8">
           <a
-            href="https://drive.google.com/file/d/1WFAF3wj-kfusVLsP2EtmrEo_axiv8WQ4/preview"
+            href="https://drive.google.com/file/d/1_BiBuF7D-EV6JoF6OyhTQNmwyAo_bwAs/view"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 md:px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all font-semibold text-sm md:text-base"
