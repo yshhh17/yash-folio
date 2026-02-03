@@ -31,7 +31,6 @@ const Navbar = () => {
           }`}
       >
         <div className="flex items-center justify-between w-full">
-          {/* Home Icon - Left */}
           <a
             href="#hero"
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -40,7 +39,6 @@ const Navbar = () => {
             <Home size={24} />
           </a>
 
-          {/* Desktop Nav - Centered */}
           <div className="hidden md:flex items-center justify-center flex-1 gap-8">
             {navItems.map((item) => (
               <a
@@ -54,7 +52,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Social Media Links - Right Side */}
           <div className="hidden md:flex items-center gap-4">
             <a href="https://github.com/yshhh17" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
               <Github size={20} />
@@ -70,7 +67,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-foreground hover:bg-primary/10 rounded-full transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -80,7 +76,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div

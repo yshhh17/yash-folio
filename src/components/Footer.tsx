@@ -21,7 +21,6 @@ const Footer = () => {
         className="max-w-5xl mx-auto"
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Left: Brand */}
           <div className="text-center md:text-left">
             <span className="text-foreground font-semibold text-lg">Yash Tiwari</span>
             <p className="text-sm text-muted-foreground mt-1">
@@ -29,7 +28,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Center: Quick Links */}
           <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
             {["About", "Experience", "Projects", "Contact"].map((item) => (
               <a
@@ -42,7 +40,6 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Right: Fun tagline with easter egg */}
           <div className="text-center md:text-right">
             <p
               className="text-sm text-muted-foreground flex items-center justify-center md:justify-end gap-1.5 cursor-pointer hover:text-foreground transition-colors"
@@ -62,7 +59,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="mt-8 pt-6 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
             © {currentYear} Yash Tiwari. All rights reserved.

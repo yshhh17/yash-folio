@@ -26,7 +26,6 @@ const KonamiOverlay = ({ isActive }: KonamiOverlayProps) => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
-      {/* Confetti */}
       {confetti.map((piece) => (
         <div
           key={piece.id}
@@ -40,7 +39,6 @@ const KonamiOverlay = ({ isActive }: KonamiOverlayProps) => {
         />
       ))}
 
-      {/* Message */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="bg-card/95 backdrop-blur-sm border border-primary px-8 py-6 rounded-2xl shadow-2xl shadow-primary/20 animate-scale-in">
           <p className="text-2xl font-bold text-foreground text-center mb-2">

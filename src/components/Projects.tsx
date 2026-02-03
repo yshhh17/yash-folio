@@ -75,10 +75,8 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative bg-gradient-to-br from-card via-card to-primary/5 rounded-xl border border-border overflow-hidden hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 flex flex-col h-full"
             >
-              {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              {/* Project Image */}
-              <div className="aspect-video bg-gradient-to-br from-secondary to-secondary/50 overflow-hidden relative">
+\              <div className="aspect-video bg-gradient-to-br from-secondary to-secondary/50 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 <img
                   src={project.image}
@@ -87,7 +85,6 @@ const Projects = () => {
                 />
               </div>
 
-              {/* Project Content */}
               <div className="p-6 md:p-8 flex flex-col flex-grow relative z-10">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
@@ -132,7 +129,6 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.techStack.map((tech) => (
                     <span

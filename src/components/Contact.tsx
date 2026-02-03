@@ -47,8 +47,6 @@ const Contact = () => {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
-    // Here you would typically send the form data to a server
-    // For this example, we'll just log it to the console
   }
 
   return (

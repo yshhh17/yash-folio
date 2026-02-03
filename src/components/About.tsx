@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="relative z-10">
-      {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +16,6 @@ const About = () => {
         <div className="w-16 h-1 bg-primary rounded-full" />
       </motion.div>
 
-      {/* Bio */}
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -52,7 +50,6 @@ const About = () => {
           and data structures knowledge.
         </p>
 
-        {/* Resume Link */}
         <div className="mt-8">
           <a
             href="https://drive.google.com/file/d/1_BiBuF7D-EV6JoF6OyhTQNmwyAo_bwAs/view"

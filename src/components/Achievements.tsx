@@ -44,7 +44,6 @@ const Achievements = () => {
     return (
         <section id="achievements" className="py-20 md:py-24 px-4 md:px-6 bg-secondary/30">
             <div className="max-w-6xl mx-auto">
-                {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +60,6 @@ const Achievements = () => {
                     </p>
                 </motion.div>
 
-                {/* Achievement Grid */}
                 <div className="grid md:grid-cols-2 gap-6">
                     {achievements.map((achievement, index) => (
                         <motion.div
@@ -73,12 +71,10 @@ const Achievements = () => {
                             className="group bg-card rounded-xl border border-border p-5 md:p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
                         >
                             <div className="flex items-start gap-4">
-                                {/* Icon */}
                                 <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                                     {achievement.icon}
                                 </div>
 
-                                {/* Content */}
                                 <div className="flex-grow">
                                     <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                                         {achievement.title}
