@@ -15,7 +15,7 @@ const achievements: Achievement[] = [
         icon: <Code className="w-8 h-8" />,
         title: "Competitive Programming",
         description: "Solved 150+ DSA problems across multiple platforms",
-        highlight: "LeetCode 1656 • Codeforces Pupil",
+        highlight: "LeetCode(1456) • Codeforces(912)",
     },
     {
         id: 2,

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const skills = [
-    { category: "Languages", items: ["Python", "C++", "C", "JavaScript", "TypeScript", "SQL", "Bash"] },
+    { category: "Languages", items: [ "JavaScript", "TypeScript", "Python", "C++", "SQL", "Bash"] },
     { category: "Full Stack Engineering", items: ["React", "TailwindCSS", "Node.js", "Express.js", "FastAPI", "REST APIs"] },
     { category: "Databases & Caching", items: ["PostgreSQL", "SQLAlchemy ORM", "MongoDB", "Redis"] },
-    { category: "Tools & Technologies", items: ["Docker", "Linux", "Git", "Nginx", "Vim", "NeoVim", "Gemini CLI", "VS Code", "Cursor"] },
+    { category: "Tools & Technologies", items: ["Docker", "Linux", "Git", "Nginx", "Vim", "NeoVim", "Gemini CLI", "VS Code", "Postman"] },
     { category: "Core CS", items: ["DSA", "System Design", "OS", "Computer Networks", "DBMS"] },
 ];
 

@@ -53,7 +53,7 @@ const Footer = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-xs text-primary mt-2"
               >
-                ...and lots of debugging at 3am 🌙
+                ...and lots of debugging at 3am! <Heart size={12} className="inline text-red-500" />
               </motion.p>
             )}
           </div>

@@ -42,11 +42,11 @@ const About = () => {
           <a href="https://leetcode.com/u/yshhh/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
             LeetCode
           </a>{" "}
-          where I've solved 100+ problems with a rating of 1456, and{" "}
-          <a href="https://codeforces.com/profile/q_" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
+          where I've solved 150+ problems with a rating of 1456, and{" "}
+          <a href="https://codeforces.com/profile/q_0" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
             Codeforces
           </a>{" "}
-          where I hold a Pupil rank. These challenges help me sharpen my algorithmic thinking
+          where I've achieved a rating of 912. These challenges help me sharpen my algorithmic thinking
           and data structures knowledge.
         </p>
 
