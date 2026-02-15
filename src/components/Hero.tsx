@@ -3,21 +3,6 @@ import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [clickCount, setClickCount] = useState(0);
-  const [showEasterEgg, setShowEasterEgg] = useState(false);
-
-  const handleProfileClick = () => {
-    const newCount = clickCount + 1;
-    setClickCount(newCount);
-
-    if (newCount >= 5) {
-      setShowEasterEgg(true);
-      setTimeout(() => {
-        setShowEasterEgg(false);
-        setClickCount(0);
-      }, 3000);
-    }
-  };
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 md:px-6 pt-32 md:pt-0 relative overflow-hidden bg-card">
@@ -84,8 +69,7 @@ const Hero = () => {
           className="order-1 md:order-2 flex justify-center md:justify-end"
         >
           <div
-            className="relative w-56 h-56 md:w-80 md:h-80 lg:w-96 lg:h-96 cursor-pointer group"
-            onClick={handleProfileClick}
+            className="relative w-56 h-56 md:w-80 md:h-80 lg:w-96 lg:h-96 group"
           >
             <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative w-full h-full rounded-3xl bg-card border-4 border-border overflow-hidden transition-all duration-300 group-hover:border-primary group-hover:shadow-xl shadow-2xl">
@@ -93,11 +77,7 @@ const Hero = () => {
                 <span className="text-8xl"><img src="/Profile.jpg" alt="Profile" className="w-full h-full object-cover" /></span>
               </div>
             </div>
-            {showEasterEgg && (
-              <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm whitespace-nowrap animate-bounce z-10">
-                You found a secret! 🎉
-              </div>
-            )}
+
           </div>
         </motion.div>
       </div>
