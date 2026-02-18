@@ -30,7 +30,6 @@ const Navbar = () => {
             : "bg-background/20 backdrop-blur-sm py-4 px-8 border-white/10"
           }`}
       >
-        {/* Animated shimmer background */}
         <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-700">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"
             style={{
@@ -40,7 +39,6 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Animated glow effect when scrolled */}
         {isScrolled && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -50,7 +48,6 @@ const Navbar = () => {
         )}
 
         <div className="relative flex items-center justify-between w-full">
-          {/* Home Icon with hover animation */}
           <motion.a
             href="#hero"
             className="text-muted-foreground hover:text-foreground transition-colors relative group"
@@ -94,7 +91,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Social Icons with hover animations */}
           <div className="hidden md:flex items-center gap-4">
             {[
               { href: "https://github.com/yshhh17", Icon: Github },
@@ -124,7 +120,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button with rotation animation */}
           <motion.button
             className="md:hidden p-2 text-foreground hover:bg-primary/10 rounded-full transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -137,7 +132,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Enhanced Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -172,7 +166,6 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      {/* CSS for shimmer animation */}
       <style>{`
         @keyframes shimmer {
           0% {

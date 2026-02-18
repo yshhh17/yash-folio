@@ -20,7 +20,6 @@ const Index = () => {
       <Experience />
       <Projects />
       <section id="about" className="py-20 md:py-24 px-4 md:px-6 relative overflow-hidden">
-        {/* Background Decorative Elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 

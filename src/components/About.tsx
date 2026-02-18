@@ -46,7 +46,7 @@ const About = () => {
           <a href="https://codeforces.com/profile/q_0" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
             Codeforces
           </a>{" "}
-          where I've achieved a rating of 912. These challenges help me sharpen my algorithmic thinking
+          where I've achieved a rating of 961. These challenges help me sharpen my algorithmic thinking
           and data structures knowledge.
         </p>
 

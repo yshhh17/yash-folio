@@ -64,7 +64,6 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Project Grid */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
