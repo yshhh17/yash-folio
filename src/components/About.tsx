@@ -37,18 +37,38 @@ const About = () => {
         </p>
 
         <p className="text-muted-foreground leading-relaxed mb-8 text-base md:text-lg">
-          I'm also passionate about competitive programming and problem-solving.
-          I regularly practice on platforms like{" "}
-          <a href="https://leetcode.com/u/yshhh/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
-            LeetCode
-          </a>{" "}
-          where I've solved 150+ problems with a rating of 1456, and{" "}
-          <a href="https://codeforces.com/profile/q_0" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
-            Codeforces
-          </a>{" "}
-          where I've achieved a rating of 961. These challenges help me sharpen my algorithmic thinking
-          and data structures knowledge.
-        </p>
+  I'm also passionate about competitive programming and problem-solving.
+  I regularly practice on platforms like{" "}
+  <a
+    href="https://leetcode.com/u/yshhh/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-primary hover:underline font-medium"
+  >
+    LeetCode
+  </a>{" "}
+  where I've solved 150+ problems with a rating of 1456,{" "}
+  <a
+    href="https://codeforces.com/profile/q_0"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-primary hover:underline font-medium"
+  >
+    Codeforces
+  </a>{" "}
+  where I've achieved a rating of 961, and{" "}
+  <a
+    href="https://www.hackerrank.com/yshhh"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-primary hover:underline font-medium"
+  >
+    HackerRank
+  </a>{" "}
+  where I actively solve algorithmic and domain-specific challenges.
+  These challenges help me sharpen my algorithmic thinking
+  and data structures knowledge.
+</p>
 
         <div className="mt-8">
           <a
