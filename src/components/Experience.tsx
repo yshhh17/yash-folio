@@ -31,8 +31,15 @@ const experiences: Experience[] = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 md:py-24 px-4 md:px-6 bg-secondary/30">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="relative py-20 md:py-24 px-4 md:px-6 bg-secondary/30 overflow-hidden">
+      <motion.div
+        aria-hidden
+        className="absolute -top-20 -left-10 w-72 h-72 rounded-full bg-primary/10 blur-3xl"
+        animate={{ x: [0, 10, 0], y: [0, -10, 0], opacity: [0.35, 0.55, 0.35] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,10 +50,25 @@ const Experience = () => {
           <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
             Work Experience
           </h2>
-          <div className="w-16 h-1 bg-primary rounded-full" />
+          <motion.div
+            className="h-1 bg-primary rounded-full"
+            initial={{ width: 0 }}
+            whileInView={{ width: 64 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          />
         </motion.div>
 
-        <div className="space-y-0">
+        <div className="relative space-y-0">
+          <motion.div
+            aria-hidden
+            className="absolute left-0 top-0 bottom-0 w-[2px] bg-border"
+            initial={{ scaleY: 0, originY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          />
+
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
@@ -54,10 +76,14 @@ const Experience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ x: 6 }}
               className={`relative pl-6 md:pl-8 border-l-2 border-border ${index !== experiences.length - 1 ? 'pb-12' : ''}`}
             >
               {/* Timeline Dot */}
-              <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary" />
+              <motion.div
+                className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary"
+                whileHover={{ scale: 1.2, boxShadow: "0 0 0 6px hsl(var(--primary) / 0.15)" }}
+              />
 
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                 <h3 className="text-lg md:text-xl font-bold text-foreground">{exp.role}</h3>
@@ -77,12 +103,14 @@ const Experience = () => {
 
               <div className="flex flex-wrap gap-2">
                 {exp.skills.map((skill) => (
-                  <span
+                  <motion.span
                     key={skill}
                     className="px-2 py-1 bg-background border border-border rounded text-xs text-muted-foreground"
+                    whileHover={{ y: -2, scale: 1.03 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 18 }}
                   >
                     {skill}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </motion.div>
