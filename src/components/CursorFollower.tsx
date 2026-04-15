@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const CursorFollower = () => {
+  const shouldRender = useMemo(() => {
+    if (typeof window === "undefined") return false;
+    return !window.matchMedia("(pointer: coarse)").matches;
+  }, []);
+
   const mouseX = useMotionValue(-200);
   const mouseY = useMotionValue(-200);
 
@@ -18,6 +23,8 @@ const CursorFollower = () => {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
+    if (!shouldRender) return;
+
     const move = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
@@ -37,11 +44,11 @@ const CursorFollower = () => {
     const onMouseLeave = () => setHidden(true);
     const onMouseEnter = () => setHidden(false);
 
-    window.addEventListener("mousemove", move);
-    window.addEventListener("mouseover", onEnterInteractive);
-    window.addEventListener("mouseout", onLeaveInteractive);
-    window.addEventListener("mousedown", onMousedown);
-    window.addEventListener("mouseup", onMouseup);
+    window.addEventListener("mousemove", move, { passive: true });
+    window.addEventListener("mouseover", onEnterInteractive, { passive: true });
+    window.addEventListener("mouseout", onLeaveInteractive, { passive: true });
+    window.addEventListener("mousedown", onMousedown, { passive: true });
+    window.addEventListener("mouseup", onMouseup, { passive: true });
     document.addEventListener("mouseleave", onMouseLeave);
     document.addEventListener("mouseenter", onMouseEnter);
 
@@ -54,10 +61,9 @@ const CursorFollower = () => {
       document.removeEventListener("mouseleave", onMouseLeave);
       document.removeEventListener("mouseenter", onMouseEnter);
     };
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, shouldRender]);
 
-  // Don't render on touch devices
-  if (typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches) {
+  if (!shouldRender) {
     return null;
   }
 
