@@ -1,17 +1,15 @@
-import { useRef, useState, ReactNode } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { ComponentPropsWithoutRef, ElementType, ReactNode, useRef } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 interface MagneticButtonProps {
   children: ReactNode;
   className?: string;
   strength?: number; // 0–1 magnetic pull factor
-  as?: "a" | "button";
-  href?: string;
-  download?: boolean;
-  target?: string;
-  rel?: string;
-  onClick?: () => void;
+  as?: ElementType;
 }
+
+type BaseProps = Omit<ComponentPropsWithoutRef<"a">, "children" | "className"> &
+  Omit<ComponentPropsWithoutRef<"button">, "children" | "className">;
 
 const MagneticButton = ({
   children,
@@ -19,7 +17,7 @@ const MagneticButton = ({
   strength = 0.4,
   as: Tag = "a",
   ...rest
-}: MagneticButtonProps) => {
+}: MagneticButtonProps & BaseProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const x = useMotionValue(0);
@@ -52,7 +50,6 @@ const MagneticButton = ({
       className="inline-block"
     >
       <motion.div style={{ x: springX, y: springY }}>
-        {/* @ts-ignore dynamic tag */}
         <Tag className={className} {...rest}>
           {children}
         </Tag>
